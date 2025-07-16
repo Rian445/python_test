@@ -29,10 +29,10 @@ def show_result(score, name, topic):
     if score >= 2:
         print("🎉 Great job!")
     else:
-        print("❌ Better luck next time!")
+        print("Better luck next time!")
 
 
-# Main Program
+# Main Program-------------------
 user_name = "Rian"
 quiz_topic = "General Knowledge"
 score = 0
