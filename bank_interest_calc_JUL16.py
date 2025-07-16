@@ -10,8 +10,8 @@ while True:
         print("Principal amount cannot be negative. Please enter a valid amount.\n")
         principle = float(input("Enter the principal amount : "))
         print("\n")
-    else:
-        break
+
+    break
 
 
 while True:
@@ -21,8 +21,8 @@ while True:
         print("Rate of interest cannot be negative. Please enter a valid rate.\n")
         rate = float(input("Enter the rate of interest : "))
         print("\n")
-    else:
-        break
+
+    break
 
 while True:
     time = float(input("Enter the time in years : "))
@@ -31,8 +31,8 @@ while True:
         print("Time cannot be negative. Please enter a valid time.\n")
         time = float(input("Enter the time in years : "))
         print("\n")
-    else:
-        break
+
+    break
 
 total_ammount = principle * pow((1 + rate / 100), time)
 
