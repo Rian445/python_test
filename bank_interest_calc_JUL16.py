@@ -1,3 +1,4 @@
+import math
 principle = 0
 rate = 0
 time = 0
@@ -32,11 +33,19 @@ while True:
 
 total_ammount = principle * pow((1 + rate / 100), time)
 
-if total_ammount >= 1000000 and principle < 1000000:
+millionire_time = math.log(1_000_000 / principle) / math.log(1 + rate / 100)
+
+if total_ammount >= 1000000 and principle < 1000000 and millionire_time >= 1:
 
     millionire_time = (time*1000000) / total_ammount
-    print(f"Total amount after {time} year/s is: ${total_ammount:.2f}")
-    print(f"You will become a millionaire after {millionire_time:.2f} year/s!")
+    print(f"Total amount after {time} year/s is: ${total_ammount:.2f}\n")
+    print(
+        f"You will become a millionaire after {millionire_time:.2f} year/s!\n")
+
+elif total_ammount >= 1000000 and principle < 1000000 and millionire_time < 1:
+    print(f"Total amount after {time} year/s is: ${total_ammount:.2f}\n")
+    print(
+        f"You will become a millionaire in less than a year! exact to be {int(millionire_time*10)} months \n")
 
 else:
-    print(f"Total amount after {time} year/s is: ${total_ammount:.2f}")
+    print(f"Total amount after {time} year/s is: ${total_ammount:.2f}\n")
